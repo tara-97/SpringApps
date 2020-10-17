@@ -11,7 +11,9 @@
     <bean id="myFortuneService" class="com.tara.springdemo.HappyFortuneService"></bean>
     <bean id="mycoach" class="com.tara.springdemo.BaseballCoach"> 
     <constructor-arg ref="myFortuneService" /></bean>
-    
+    <bean id="myCricketCoach" class = "com.tara.springdemo.CricketCoach">
+    <property name="fortuneService" ref="myFortuneService"></property>
+    </bean>
     
 </beans>
 
